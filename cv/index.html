@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网页简历</title>
+
+</head>
+
+<body>
+
+    <style id="style">
+
+    </style>
+    <div id="html"></div>
+    <div id="hejiajin">
+        <div id="div1"></div>
+
+
+    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        *::before {
+            box-sizing: border-box;
+        }
+        
+        #html {
+            word-break: break-all;
+            /* 自动折行 */
+        }
+        
+        #div1 {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            /* 居中显示 */
+            top: 10px;
+        }
+        
+        #div1::before {
+            content: ' ';
+            display: block;
+            /* border: 1px solid red; */
+            position: absolute;
+        }
+        
+        #div1::after {
+            content: ' ';
+            display: block;
+            /* border: 1px solid red; */
+            position: absolute;
+        }
+        /* 检测屏幕是否是手机 */
+        
+        @media (max-width: 500px) {
+            #html {
+                height: 50vh;
+                overflow: auto;
+            }
+            #div1 {
+                position: relative;
+                /* 去除之前的定位 */
+                top: 0;
+                right: 0;
+            }
+            #hejiajin {
+                height: 50vh;
+            }
+        }
+    </style>
+    <script src="main.js">
+    </script>
+
+</body>
+
+</html>
